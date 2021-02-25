@@ -1,38 +1,83 @@
-.App {
+:root {
+  --mainWhite: #f0efef;
+  --mainGrey: #dbdbdb;
+  --darkGrey: #c7c7c7;
+}
+
+body {
+  background-color: var(--mainWhite);
+  font-family: 'Crimson Pro', serif;
+}
+
+
+.nameGenContainer {
+  background-color: var(--mainWhite);
+  margin: auto;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#option-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.option {
+  width: 200px;
+  margin-bottom: 20px;
+  background-color: var(--mainWhite) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.name-container {
+  width: 525px;
+  margin: auto auto 2em auto;
+  background-color: var(--darkGrey);
+  padding: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  display: flex;
+}
+#left, #right {
+  width: 100%;
+  flex-grow: 1;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  background-color: var(--mainGrey);
+}
+#left {
+  border-right: 1px solid rgba(0, 0, 0, 0.6);
+}
+#right {
+  border-left: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.name {
+  font-size: 1.05em;
+  text-align: left;
+  margin: 0.6rem 0 0.6rem 2rem;
+}
+
+@media only screen and (max-width: 580px) {
+  .name-container {
+    flex-direction: column;
+    width: 80%;
+    min-width: 260px;
+    padding: 0.3rem;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  #left, #right {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+  }
+  #left {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  }
+  #right {
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
   }
 }
